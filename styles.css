@@ -860,3 +860,22 @@ body {
     transition: none;
   }
 }
+
+/* About / bio */
+.about .bio {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 38em;
+}
+
+.about .bio em {
+  color: var(--text);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.about .section-head {
+  margin-bottom: 16px;
+}
