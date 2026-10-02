@@ -729,3 +729,134 @@ body {
   border: 1px solid rgba(201, 162, 39, 0.25);
   border-radius: 50%;
 }
+
+/* Listen — platform choice */
+.platform-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 520px;
+}
+
+@media (min-width: 480px) {
+  .platform-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 110px;
+  padding: 18px 16px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.platform-card:hover,
+.platform-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(201, 162, 39, 0.45);
+  background: rgba(22, 22, 22, 0.92);
+  outline: none;
+}
+
+.platform-card:active {
+  transform: translateY(0);
+}
+
+.platform-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #0a0a0a;
+}
+
+.platform-spotify .platform-icon {
+  background: #1db954;
+  color: #0a0a0a;
+}
+
+.platform-ytm .platform-icon {
+  background: #ff0033;
+  color: #fff;
+}
+
+.platform-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.platform-hint {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.album-listen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .album-listen {
+    justify-content: flex-start;
+  }
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.btn-spotify {
+  background: #1db954;
+  color: #0a0a0a;
+  border-color: transparent;
+}
+
+.btn-spotify:hover,
+.btn-spotify:focus-visible {
+  background: #1ed760;
+  outline: none;
+}
+
+.btn-ytm {
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.btn-ytm:hover,
+.btn-ytm:focus-visible {
+  border-color: #ff0033;
+  color: #fff;
+  background: rgba(255, 0, 51, 0.12);
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-card {
+    transition: none;
+  }
+}
