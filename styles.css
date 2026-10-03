@@ -902,3 +902,9 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* My Thoughts track list sits on the album card */
+.album-thoughts .tracklist {
+  margin: 0 0 4px;
+  text-align: left;
+}
